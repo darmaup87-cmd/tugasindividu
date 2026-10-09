@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Biodata Darma Satria Ramadhan, mahasiswa Teknik Informatika TI01.">
+  <title>Biodata Darma Satria Ramadhan</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172d38;
+      --muted: #62747a;
+      --paper: #f4f2eb;
+      --card: #fffefa;
+      --line: #dce1dc;
+      --ocean: #245b67;
+      --sea-glass: #d9e9df;
+      --sand: #e9bd78;
+      --shadow: 0 18px 50px rgb(23 45 56 / 9%);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 92% 7%, rgb(217 233 223 / 75%), transparent 27rem),
+        var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+
+    .page-shell {
+      width: min(1080px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      border-bottom: 1px solid rgb(220 225 220 / 85%);
+      background: rgb(244 242 235 / 94%);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      display: flex;
+      min-height: 74px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ocean);
+      font-size: .9rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--ocean);
+      color: white;
+      font-size: .75rem;
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: .88rem;
+      font-weight: 650;
+    }
+
+    .site-nav a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible { color: var(--ocean); }
+
+    main { padding-bottom: 76px; }
+
+    .hero {
+      display: grid;
+      min-height: 590px;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 70px;
+      padding-block: 76px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--ocean);
+      font-size: .74rem;
+      font-weight: 850;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1, h2, h3 {
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.12;
+    }
+
+    h1 {
+      max-width: 650px;
+      margin-bottom: 20px;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      letter-spacing: -.065em;
+    }
+
+    .hero-copy {
+      max-width: 500px;
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 18px;
+      border: 1px solid var(--ocean);
+      border-radius: 999px;
+      background: var(--ocean);
+      color: white;
+      font-size: .9rem;
+      font-weight: 750;
+      text-decoration: none;
+      transition: transform .2s ease, background-color .2s ease;
+    }
+
+    .button:hover { transform: translateY(-2px); }
+
+    .button-secondary {
+      background: transparent;
+      color: var(--ocean);
+    }
+
+    .portrait-wrap {
+      position: relative;
+      width: min(100%, 365px);
+      justify-self: center;
+    }
+
+    .portrait-wrap::before {
+      position: absolute;
+      z-index: -1;
+      inset: 22px -20px -20px 20px;
+      border-radius: 48% 48% 22px 22px;
+      background: var(--sand);
+      content: "";
+      transform: rotate(3deg);
+    }
+
+    .portrait {
+      display: block;
+      width: 100%;
+      height: 445px;
+      border: 8px solid var(--card);
+      border-radius: 48% 48% 22px 22px;
+      background: var(--sea-glass);
+      box-shadow: var(--shadow);
+      object-fit: cover;
+      object-position: center 36%;
+    }
+
+    .portrait-caption {
+      position: absolute;
+      right: -22px;
+      bottom: 28px;
+      max-width: 190px;
+      margin: 0;
+      padding: 13px 16px;
+      border-radius: 14px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      color: var(--ocean);
+      font-size: .84rem;
+      font-weight: 750;
+    }
+
+    .content-section {
+      padding-block: 76px;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 90px;
+    }
+
+    .section-heading {
+      max-width: 630px;
+      margin-bottom: 34px;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 12px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -.045em;
+    }
+
+    .section-heading > p:last-child {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .panel {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .panel h3 {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .bio-list {
+      display: grid;
+      grid-template-columns: minmax(105px, .55fr) 1fr;
+      gap: 12px 18px;
+      margin: 0;
+    }
+
+    .bio-list dt { color: var(--muted); }
+    .bio-list dd { margin: 0; font-weight: 700; }
+
+    .fact-list {
+      display: grid;
+      gap: 13px;
+      margin: 0;
+      padding-left: 21px;
+    }
+
+    .fact-list li { padding-left: 4px; }
+    .fact-list li::marker { color: var(--ocean); }
+
+    .goal {
+      margin: 22px 0 0;
+      padding: 15px 17px;
+      border-radius: 14px;
+      background: var(--sea-glass);
+      color: var(--ocean);
+      font-weight: 750;
+    }
+
+    .goal span {
+      display: block;
+      margin-bottom: 3px;
+      font-size: .72rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .form-field {
+      display: grid;
+      gap: 7px;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #cbd5d2;
+      border-radius: 11px;
+      background: white;
+      color: var(--ink);
+      font: inherit;
+    }
+
+    select {
+      width: 100%;
+      min-height: 48px;
+      padding: 10px 14px;
+      border: 1px solid #cbd5d2;
+      border-radius: 11px;
+      background: white;
+      color: var(--ink);
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    input:focus-visible, textarea:focus-visible, select:focus-visible, .button:focus-visible {
+      outline: 3px solid var(--sand);
+      outline-offset: 3px;
+    }
+
+    .form-demo {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .form-demo .form-field { min-width: 0; }
+
+    .page-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .page-link-card {
+      display: flex;
+      min-height: 185px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .page-link-card h3 { margin: 0 0 8px; }
+    .page-link-card p { flex: 1; margin-bottom: 18px; color: var(--muted); }
+
+    .form-demo fieldset {
+      min-width: 0;
+      margin: 0;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .list-examples {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .list-examples fieldset {
+      min-width: 0;
+      margin: 0;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--card);
+    }
+
+    .form-demo legend {
+      padding-inline: 5px;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    .choice-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+    }
+
+    .choice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .9rem;
+    }
+
+    .choice input {
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      accent-color: var(--ocean);
+    }
+
+    .form-demo .form-hint,
+    .form-demo .button { grid-column: 1 / -1; }
+
+    .range-line {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .range-line input { padding: 0; }
+
+    .range-line output {
+      min-width: 2.5em;
+      color: var(--ocean);
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+    }
+
+    .form-demo input[type="color"] {
+      min-height: 48px;
+      padding: 5px;
+    }
+
+    .form-hint {
+      margin: 0;
+      color: var(--muted);
+      font-size: .83rem;
+    }
+
+    .site-footer {
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .84rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px 24px;
+    }
+
+    .footer-inner p { margin: 0; }
+
+    @media (max-width: 760px) {
+      .header-inner { align-items: flex-start; flex-direction: column; justify-content: center; gap: 8px; padding-block: 13px; }
+      .site-nav { gap: 10px 18px; }
+      .hero { min-height: 0; grid-template-columns: 1fr; gap: 44px; padding-block: 60px 72px; }
+      .hero-content { text-align: center; }
+      .hero-copy { margin-inline: auto; }
+      .hero-actions { justify-content: center; }
+      .portrait-wrap { width: min(78%, 340px); }
+      .portrait { height: 390px; }
+      .about-grid, .page-links { grid-template-columns: 1fr; gap: 18px; }
+      .form-demo { grid-template-columns: 1fr; }
+      .list-examples { grid-template-columns: 1fr; }
+      .form-demo .form-hint, .form-demo .button { grid-column: auto; }
+      .content-section { padding-block: 58px; }
+    }
+
+    @media (max-width: 480px) {
+      .page-shell { width: min(100% - 28px, 420px); }
+      .brand { font-size: .8rem; }
+      .site-nav { gap: 8px 14px; font-size: .82rem; }
+      .hero { padding-top: 48px; }
+      .portrait-wrap { width: 82%; }
+      .portrait { height: 345px; }
+      .portrait-caption { right: -16px; bottom: 18px; }
+      .panel { padding: 22px; }
+      .bio-list { grid-template-columns: 95px 1fr; gap: 10px 12px; font-size: .92rem; }
+      th, td { padding: 12px 14px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="page-shell header-inner">
+      <a class="brand" href="#beranda" aria-label="Darma Satria, kembali ke beranda">
+        <span class="brand-mark" aria-hidden="true">DS</span>
+        <span>BIODATA INDIVIDU · TI01</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigasi utama">
+        <a href="#biodata">Biodata</a>
+        <a href="riwayatpendidikan.html">Pendidikan</a>
+        <a href="#biodata">Data diri</a>
+        <a href="#elemen-form">Form HTML</a>
+        <a href="mediasosial.html">Media sosial</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="beranda" class="page-shell">
+    <section class="hero" aria-labelledby="nama">
+      <div class="hero-content">
+        <p class="eyebrow">Profil mahasiswa · Praktikum Mandiri 01</p>
+        <h1 id="nama">Darma Satria Ramadhan</h1>
+        <p class="hero-copy">Saya mahasiswa Teknik Informatika kelas TI01. Di sini ada biodata singkat dan beberapa info tentang saya.</p>
+        <div class="hero-actions">
+          <a class="button" href="#biodata">Lihat biodata <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="mediasosial.html">Hubungi saya <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <figure class="portrait-wrap">
+        <img class="portrait" src="darmasatria.jpeg" alt="Darma Satria Ramadhan di tepi pantai">
+        <figcaption class="portrait-caption">Salam kenal!<br>Makasih sudah mampir.</figcaption>
+      </figure>
+    </section>
+
+    <section id="biodata" class="content-section" aria-labelledby="biodata-title">
+      <div class="section-heading">
+        <p class="eyebrow">Sedikit tentang saya</p>
+        <h2 id="biodata-title">Biodata singkat</h2>
+        <p>Ini data diri saya.</p>
+      </div>
+      <div class="about-grid">
+        <article class="panel">
+          <h3>Data diri</h3>
+          <dl class="bio-list">
+            <dt>Nama</dt><dd>Darma Satria Ramadhan</dd>
+            <dt>NIM</dt><dd>0110226178</dd>
+            <dt>Kelas</dt><dd>TI01</dd>
+            <dt>Program studi</dt><dd>Teknik Informatika</dd>
+            <dt>Perguruan tinggi</dt><dd>STT Terpadu Nurul Fikri</dd>
+            <dt>Cita-cita</dt><dd>Presiden</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="halaman-lain-title">
+      <div class="section-heading">
+        <p class="eyebrow">Mau tahu lebih lanjut?</p>
+        <h2 id="halaman-lain-title">Cek halaman lainnya</h2>
+        <p>Info sekolah dan akun media sosial saya ada di halaman masing-masing.</p>
+      </div>
+      <div class="page-links">
+        <article class="page-link-card">
+          <p class="eyebrow">01 · Sekolah dan kuliah</p>
+          <h3>Riwayat pendidikan</h3>
+          <p>Daftar sekolah dan kampus tempat saya belajar.</p>
+          <a class="button" href="riwayatpendidikan.html">Lihat riwayat pendidikan <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="page-link-card">
+          <p class="eyebrow">02 · Media sosial</p>
+          <h3>Media sosial</h3>
+          <p>Kalau mau menyapa, bisa lewat WhatsApp atau Instagram.</p>
+          <a class="button button-secondary" href="mediasosial.html">Lihat akun saya <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section id="elemen-form" class="content-section" aria-labelledby="elemen-form-title">
+      <div class="section-heading">
+        <p class="eyebrow">Coba sendiri</p>
+        <h2 id="elemen-form-title">Contoh form HTML</h2>
+        <p>Ini cuma form contoh buat tugas. Catatan pemakaiannya ada di atas.</p>
+      </div>
+      <div class="list-examples">
+        <fieldset>
+          <legend>Unordered list (&lt;ul&gt;)</legend>
+          <p>Contoh list dengan tanda bullet:</p>
+          <ul class="fact-list">
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Ordered list (&lt;ol&gt;)</legend>
+          <ol class="fact-list">
+            <li>Form ini cuma buat tugas.</li>
+            <li>Asal pencet, nggak ngaruh apa-apa.</li>
+            <li>Form ini nggak dikirim ke mana-mana karena saya nggak punya server.</li>
+          </ol>
+        </fieldset>
+      </div>
+      <form class="panel form-demo" id="elements-form">
+        <label class="form-field" for="tanggal-lahir">
+          Tanggal (hari, bulan, tahun)
+          <input id="tanggal-lahir" name="tanggal" type="date">
+        </label>
+        <label class="form-field" for="bulan-lahir">
+          Bulan dan tahun
+          <input id="bulan-lahir" name="bulan" type="month">
+        </label>
+        <label class="form-field" for="pekan">
+          Pekan ke-
+          <input id="pekan" name="pekan" type="week">
+        </label>
+        <label class="form-field" for="waktu">
+          Jam
+          <input id="waktu" name="waktu" type="time">
+        </label>
+        <label class="form-field" for="tanggal-waktu">
+          Tanggal dan jam
+          <input id="tanggal-waktu" name="tanggal-waktu" type="datetime-local">
+        </label>
+        <label class="form-field" for="jumlah">
+          Angka (coba di HP untuk keypad angka)
+          <input id="jumlah" name="jumlah" type="number" inputmode="numeric" min="0" max="999999" step="1" placeholder="Contoh: 12345">
+        </label>
+        <label class="form-field" for="mata-kuliah">
+          Mata kuliah (ketik untuk melihat saran)
+          <input id="mata-kuliah" name="mata-kuliah" type="text" list="daftar-mata-kuliah" autocomplete="off" placeholder="Pilih atau ketik sendiri">
+          <datalist id="daftar-mata-kuliah">
+            <option value="Dasar-Dasar HTML"></option>
+            <option value="CSS"></option>
+            <option value="JavaScript"></option>
+            <option value="Desain UI/UX"></option>
+          </datalist>
+        </label>
+        <label class="form-field" for="kategori">
+          Pilih mata kuliah
+          <select id="kategori" name="kategori">
+            <option value="">Pilih mata kuliah</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+          </select>
+        </label>
+        <label class="form-field" for="tingkat">
+          Atur nilai (0-100)
+          <span class="range-line">
+            <input id="tingkat" name="tingkat" type="range" min="0" max="100" value="50">
+            <output id="tingkat-output" for="tingkat">50</output>
+          </span>
+        </label>
+        <label class="form-field" for="warna">
+          Pilih warna
+          <input id="warna" name="warna" type="color" value="#245b67">
+        </label>
+        <fieldset>
+          <legend>Minat (boleh pilih lebih dari satu)</legend>
+          <div class="choice-list">
+            <label class="choice"><input type="checkbox" name="minat" value="desain"> Desain</label>
+            <label class="choice"><input type="checkbox" name="minat" value="pemrograman"> Pemrograman</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Cara belajar (pilih satu)</legend>
+          <div class="choice-list">
+            <label class="choice"><input type="radio" name="mode-belajar" value="mandiri"> Mandiri</label>
+            <label class="choice"><input type="radio" name="mode-belajar" value="kelompok"> Kelompok</label>
+          </div>
+        </fieldset>
+        <p class="form-hint">Tampilan pemilih tanggal dan waktu bisa berbeda, tergantung browser dan perangkat yang dipakai.</p>
+        <button class="button" type="button">Tombol demo (tidak mengirim) <span aria-hidden="true">↗</span></button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-inner">
+      <p>Darma Satria Ramadhan · TI01</p>
+      <p>Praktikum Dasar-Dasar HTML · Desain UI/UX PemWeb</p>
+    </div>
+  </footer>
+
+  <script>
+    const range = document.querySelector("#tingkat");
+    const rangeOutput = document.querySelector("#tingkat-output");
+
+    range.addEventListener("input", () => {
+      rangeOutput.value = range.value;
+    });
+
+  </script>
+</body>
+</html>
